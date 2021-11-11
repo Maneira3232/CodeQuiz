@@ -3,30 +3,30 @@
 var questions = [
     {
         text: "Who coined the term 'Bug' ?",
-        choices: ["A.In 1947 a technician at Harvard had an issue with the performance of their Mark II computer.", "B.In 1869 Thomas Edison used the term to scribe issues with his inventions.", "C.It was a common term before they existed."],
-        answer: "C.It was a common term before they existed."
+        choices: ["A technician at Harvard had an issue with the performance of their Mark II computer.", "Thomas Edison used the term to scribe issues with his inventions.", "It was a common term before they existed."],
+        answer: "It was a common term before they existed."
     },
     {
-        text: "My code Quiz question 2",
-        choices: ["c1", "c2", "c3"],
-        answer: "c3"
-    },
-
-    {
-        text: "My code Quiz question 3",
-        choices: ["c1", "c2", "c3"],
-        answer: "c3"
+        text: "What Football team in the NFL has the most Superbowls to date?",
+        choices: ["The Stealers", "The Eagles", "The Patriots"],
+        answer: "The Stealers"
     },
 
     {
-        text: "My code Quiz question 4",
-        choices: ["c1", "c2", "c3"],
-        answer: "c3"
+        text: "Who was known as the worlds first Coder?",
+        choices: ["Archimedes", "Ada Lovelace", "Melba Roy Mouton"],
+        answer: "Ada Lovelace"
+    },
+
+    {
+        text: "Who through the most intersections in NFL history",
+        choices: ["Mark Sanchez", "Eli Manning", "Brett Favre"],
+        answer: "Brett Favre"
     },
     {
-        text: "My code Quiz question 5",
-        choices: ["c1", "c2", "c3"],
-        answer: "c3"
+        text: "Who was the Creator of the first Football Video game?",
+        choices: ["Keiji Yamagishi", "Ralph Baer", "John Madden"],
+        answer: "Keiji Yamagishi"
     }
 ]
 //HTML elements
