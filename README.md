@@ -7,6 +7,6 @@ You will be asked 5 questions, two of the questions will be about coding history
 
 ## Author 
 
-URL:
+URL:https://github.com/Maneira3232/CodeQuiz.git
 Github account:
 Repository:https://github.com/Maneira3232/CodeQuiz
