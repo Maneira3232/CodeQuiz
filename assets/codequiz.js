@@ -1,4 +1,4 @@
-//data
+
 //global variable for application state
 var questions = [
     {
@@ -35,10 +35,16 @@ var startBtn = document.getElementById("start");
 var questionContainer = document.getElementById("question");
 var choiceContainer = document.getElementById("choices");
 var timerContainer = document.getElementById("timer");
+var viewScore = document.getElementById("scores")
 
 var questionsIndex = 0
 var score = 0
 var timer = 60
+
+function scoreview() {
+    var score = document.createElement('')
+
+}
 
 function setTime() {
     var time = document.createElement('h4')
@@ -94,3 +100,4 @@ function renderQuestion() {
 }
 
 startBtn.addEventListener("click", startQuiz);
+viewScore.addEventListener("click",  );
