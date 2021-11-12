@@ -2,8 +2,12 @@
     display: none;
 }
 
-body{
+body {
     text-align: center;
-    
+
+}
+
+#choices li {
+    list-style-type: none;
 }
 

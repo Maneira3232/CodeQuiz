@@ -35,15 +35,19 @@ var startBtn = document.getElementById("start");
 var questionContainer = document.getElementById("question");
 var choiceContainer = document.getElementById("choices");
 var timerContainer = document.getElementById("timer");
-var viewScore = document.getElementById("scores")
+var mainContent = document.getElementById("main-container")
+var currentScoreContainer = document.getElementById("current-score")
 
 var questionsIndex = 0
 var score = 0
 var timer = 60
 
-function scoreview() {
-    var score = document.createElement('')
-
+function scoreView() {
+    currentScoreContainer.textContent = ''
+    var currentScore = document.createElement('h3')
+    currentScore.textContent = 'Your Current Score: ' + score
+    currentScoreContainer.append(currentScore)
+    
 }
 
 function setTime() {
@@ -65,6 +69,29 @@ function startQuiz() {
 };
 
 function renderQuestion() {
+    if ( timer < 0 || questionsIndex > questions.length - 1) {
+        console.log('quiz is over')
+        mainContent.textContent = ''
+        var input = document.createElement('input')
+        input.setAttribute('placeholder', 'What is your Name?')
+        var button = document.createElement('button')
+        button.textContent = 'Submit'
+        mainContent.append(input)
+        mainContent.append(button)
+
+        button.addEventListener('click', function() {
+            var storage = JSON.parse(localStorage.getItem('user'))
+            if(storage === null) {
+                storage = []
+            }
+            var currentUser = {
+                name: input.value,
+                score: score
+            }
+            storage.push(currentUser)
+            localStorage.setItem('user', JSON.stringify(storage))
+        })
+    }
     var currentQuestion = document.createElement('h2')
 
     // clearing question content
@@ -85,7 +112,7 @@ function renderQuestion() {
         // click event to check answer and render new question but adding 1 to questionsIndex
         listEl.addEventListener("click", function (event) {
             if (event.target.id === questions[questionsIndex].answer) {
-                score += 10
+                score += 20
                 console.log('correct')
                 console.log(score)
             } else {
@@ -94,10 +121,10 @@ function renderQuestion() {
                 console.log(score)
             }
             questionsIndex++;
+            scoreView()
             renderQuestion()
         })
     }
 }
 
 startBtn.addEventListener("click", startQuiz);
-viewScore.addEventListener("click",  );
